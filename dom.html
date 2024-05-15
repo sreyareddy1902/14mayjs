@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+
+    <!-------displaying--
+    <h1>dom</h1>
+    <div id="a">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquid!</p>
+    </div>
+    <p id="b">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eos odit, architecto explicabo voluptatum assumenda hic fuga. Neque, quae modi.</p>
+    <img src="" alt="">
+    <a href="https://www.instagram.com/">instagram</a>
+    
+
+    <script>
+        console.log(document.body)
+        console.log(document.head)
+        console.log(document.images)
+        console.log(document.anchors)
+        console.log(document.title)
+    </script>
+    -------->
+
+
+    <!-------
+    <h1 id="a"> </h1>
+    <p id="a"> </p>
+
+    <h1 class="a1"></h1>
+    <p class="b1"></p>
+
+    <script>
+
+        /*----
+        document.getElementById("a").innerHTML="john"
+        document.getElementById("b").innerText="john is a good student"
+
+        document.getElementsByClassName("a1").innerHTML="joe"
+        document.getElementsByClassName("b1").innerText="joe is a good student"
+        -------*/
+
+        document.querySelector("#a").innerHTML="joe"
+        document.querySelector('#a').innerHTML="joe is a good student"
+
+        
+    </script>
+    ------>
+
+<!-----css properties through js--
+
+    <h1 id="a">iam a heading tag</h1>
+    <p id="b">iam a paragraph tag</p>
+
+    <script>
+        document.getElementById("a").style.color="red"
+        document.getElementById("a").style.border="1px solid green"
+
+
+        document.getElementById("b").style.color="violet"
+        document.getElementById("b").style.backgroundColor="black"
+    </script>
+
+    ------->
+
+    <!-----create element,append the element--
+    <div id="first">
+        <p>first paragraph in div1</p>
+        <p>second paragraph in div1</p>
+    </div>
+
+    <div id="second">
+        <p>first paragraph in div2</p>
+        <p>second paragraph in div2</p>
+    </div>
+
+    <script>
+        let n=document.createElement('p')
+        n.innerText="third paragraph in div 1"
+        console.log(n)
+
+        let p=document.getElementById("first")
+        p.appendChild(n)
+    </script>
+    ------->
+
+<!--------inserting an element before child element--
+    <div id="first">
+        <p>first paragraph in div1</p>
+        <p id="p1">second paragraph in div1</p>
+    </div>
+
+    <script>
+        let n=document.createElement('p')
+        n.innerText="third paragraph in div1"
+
+        let parent=document.getElementById("first")
+
+        let child=document.getElementById("p1")
+        parent.insertBefore(n,child)
+
+
+
+    </script>
+
+    ------>
+
+    <!-----------remove an element
+    <div id="first">
+        <p>first paragraph in div1</p>
+        <p id="p1">second paragraph in div1</p>
+    </div>
+
+    <script>
+
+        let x=document.getElementById("p1")
+        x.remove()
+        console.log(x)
+    </script>
+    -------->
+
+</body>
+</html>
